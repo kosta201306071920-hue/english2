@@ -1,0 +1,160 @@
+Вот готовый одностраничный сайт для репетитора по английскому. Это один HTML-файл, его можно открыть в браузере или загрузить на любой хостинг. Замените текст в квадратных скобках на свои данные.
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Репетитор по английскому языку – [Имя]</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: 'Segoe UI', Arial, sans-serif; line-height: 1.6; color: #333; }
+    header {
+      background: linear-gradient(135deg, #4a6cf7, #6f42c1);
+      color: #fff; text-align: center; padding: 100px 20px;
+    }
+    header h1 { font-size: 2.6rem; margin-bottom: 15px; }
+    header p { font-size: 1.2rem; opacity: .9; max-width: 600px; margin: 0 auto 30px; }
+    .btn {
+      display: inline-block; padding: 14px 32px; background: #ffc107; color: #333;
+      text-decoration: none; border-radius: 30px; font-weight: bold; transition: .3s;
+    }
+    .btn:hover { transform: translateY(-3px); box-shadow: 0 6px 15px rgba(0,0,0,.2); }
+    section { padding: 70px 20px; max-width: 1000px; margin: 0 auto; }
+    section h2 { text-align: center; font-size: 2rem; margin-bottom: 40px; color: #4a6cf7; }
+    .about { display: flex; flex-wrap: wrap; gap: 40px; align-items: center; }
+    .about img {
+      width: 260px; height: 260px; object-fit: cover; border-radius: 50%;
+      box-shadow: 0 10px 25px rgba(0,0,0,.15);
+    }
+    .about div { flex: 1; min-width: 260px; }
+    .cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: 25px; }
+    .card {
+      background: #f5f7ff; padding: 30px; border-radius: 15px; text-align: center;
+      transition: .3s; border: 1px solid #e3e8ff;
+    }
+    .card:hover { transform: translateY(-6px); box-shadow: 0 10px 25px rgba(74,108,247,.2); }
+    .card .price { font-size: 1.8rem; color: #4a6cf7; font-weight: bold; margin: 15px 0; }
+    .card ul { list-style: none; text-align: left; margin-top: 15px; }
+    .card li { padding: 5px 0; }
+    .card li::before { content: "✓ "; color: #28a745; font-weight: bold; }
+    .reviews { background: #f9f9f9; }
+    .review {
+      background: #fff; padding: 25px; border-radius: 12px; margin-bottom: 20px;
+      box-shadow: 0 3px 10px rgba(0,0,0,.05); font-style: italic;
+    }
+    .review strong { display: block; margin-top: 10px; font-style: normal; color: #4a6cf7; }
+    form { max-width: 500px; margin: 0 auto; display: flex; flex-direction: column; gap: 15px; }
+    input, select, textarea {
+      padding: 14px; border: 1px solid #ccc; border-radius: 8px; font-size: 1rem;
+    }
+    input:focus, select:focus, textarea:focus { outline: none; border-color: #4a6cf7; }
+    form button {
+      padding: 14px; background: #4a6cf7; color: #fff; border: none;
+      border-radius: 8px; font-size: 1.1rem; cursor: pointer; transition: .3s;
+    }
+    form button:hover { background: #3652d9; }
+    .contacts { text-align: center; font-size: 1.1rem; }
+    .contacts a { color: #4a6cf7; text-decoration: none; }
+    footer { background: #222; color: #aaa; text-align: center; padding: 25px; }
+    @media (max-width: 600px) {
+      header h1 { font-size: 2rem; }
+      .about img { width: 200px; height: 200px; }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Английский язык с [Имя]</h1>
+    <p>Говорите уверенно уже через несколько месяцев. Индивидуальные занятия онлайн и офлайн для детей и взрослых</p>
+    <a href="#contact" class="btn">Записаться на пробное занятие</a>
+  </header>
+
+  <section id="about">
+    <h2>Обо мне</h2>
+    <div class="about">
+      <img src="https://via.placeholder.com/260" alt="Фото репетитора">
+      <div>
+        <p>Меня зовут <strong>[Имя]</strong>. Я преподаю английский язык более <strong>[N]</strong> лет.</p>
+        <p>Образование: [например, лингвистический университет, диплом по английскому языку].</p>
+        <p>Сертификаты: [например, IELTS 8.0, TOEFL 110, CELTA].</p>
+        <p>Мой подход: обучение через живое общение, практику и интересные материалы, без скучной зубрёжки.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="services" style="background:#fff;">
+    <h2>Программы и стоимость</h2>
+    <div class="cards">
+      <div class="card">
+        <h3>Для детей</h3>
+        <div class="price">[1500] ₽ / занятие</div>
+        <ul>
+          <li>Игровой формат</li>
+          <li>Подготовка к школе</li>
+          <li>Домашние задания</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3>Для взрослых</h3>
+        <div class="price">[2000] ₽ / занятие</div>
+        <ul>
+          <li>Разговорная практика</li>
+          <li>Работа и путешествия</li>
+          <li>Гибкое расписание</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3>Подготовка к экзаменам</h3>
+        <div class="price">[2500] ₽ / занятие</div>
+        <ul>
+          <li>IELTS, TOEFL, ОГЭ, ЕГЭ</li>
+          <li>Пробные тесты</li>
+          <li>Разбор ошибок</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section id="reviews" class="reviews">
+    <h2>Отзывы учеников</h2>
+    <div class="review">
+      «За 3 месяца я перестал бояться говорить по-английски. Занятия очень живые и интересные!»
+      <strong>— Анна, 28 лет</strong>
+    </div>
+    <div class="review">
+      «Сын с удовольствием ходит на занятия. Оценка в школе выросла с тройки до пятёрки».
+      <strong>— Ольга, мама ученика</strong>
+    </div>
+  </section>
+
+  <section id="contact">
+    <h2>Запишитесь на пробное занятие</h2>
+    <form action="mailto:[ваш@email.ru]" method="post" enctype="text/plain">
+      <input type="text" name="Имя" placeholder="Ваше имя" required>
+      <input type="tel" name="Телефон" placeholder="Телефон или Telegram" required>
+      <select name="Программа">
+        <option>Для детей</option>
+        <option>Для взрослых</option>
+        <option>Подготовка к экзаменам</option>
+      </select>
+      <textarea name="Сообщение" rows="4" placeholder="Ваш уровень, пожелания"></textarea>
+      <button type="submit">Отправить заявку</button>
+    </form>
+  </section>
+
+  <section class="contacts">
+    <h2>Контакты</h2>
+    <p>📞 <a href="tel:+70000000000">+7 (000) 000-00-00</a></p>
+    <p>✉️ <a href="mailto:[ваш@email.ru]">[ваш@email.ru]</a></p>
+    <p>💬 Telegram: <a href="https://t.me/[username]">@[username]</a></p>
+    <p>📍 Занятия онлайн (Zoom, Skype) и очно: [город, район]</p>
+  </section>
+
+  <footer>
+    © 2025 [Имя] — репетитор английского языка. Все права защищены.
+  </footer>
+
+</body>
+</html>
